@@ -1,0 +1,28 @@
+{
+  "name": "knowyourcandidate",
+  "version": "1.0.0",
+  "description": "An api library for democratic constitution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/nodemon/bin/nodemon.js ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rv008/knowYourCandidate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rv008/knowYourCandidate/issues"
+  },
+  "homepage": "https://github.com/rv008/knowYourCandidate#readme",
+  "dependencies": {
+    "boom": "^7.3.0",
+    "fastify": "^2.1.0",
+    "fastify-formbody": "^3.1.0",
+    "fastify-swagger": "^2.3.2",
+    "mongoose": "^5.4.20",
+    "nodemon": "^1.18.10"
+  }
+}
