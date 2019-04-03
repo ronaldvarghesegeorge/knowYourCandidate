@@ -1,13 +1,13 @@
 const boom = require('boom')
 const Constituency = require('../model/constituency')
 
-Constituency.pre('save', (next) => {
-  this.updatedAt = new Date()
-  if (!this.createdAt) {
-    this.createdAt = new Date()
-  }
-  next()
-})
+// Constituency.pre('save', (next) => {
+//   this.updatedAt = new Date()
+//   if (!this.createdAt) {
+//     this.createdAt = new Date()
+//   }
+//   next()
+// })
 
 exports.getConstituency = async (req, reply) => {
   try {
