@@ -2,14 +2,17 @@ const fastify = require('fastify')({
   logger: true
 })
 
-const routes = require('./route/constituency')
+const constituencyRoutes = require('./route/constituency')
+// const candidateRoutes = require("./route/candidate")
 const swagger = require('./config/swagger')
 const mongoose = require('mongoose')
 
 fastify.register(require('fastify-formbody'))
 fastify.register(require('fastify-swagger'), swagger.options)
 
-routes.forEach((route) => {
+// const routes = constituencyRoutes.concat(candidateRoutes)
+
+constituencyRoutes.forEach((route) => {
   fastify.route(route)
 })
 

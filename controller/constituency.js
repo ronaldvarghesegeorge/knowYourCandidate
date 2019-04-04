@@ -29,6 +29,8 @@ exports.getSingleConstituency = async (req, reply) => {
 exports.addConstituency = async (req, reply) => {
   try {
     const data = new Constituency(req.body)
+    data.createdAt = new Date()
+    data.updatedAt = new Date()
     return data.save()
   } catch (err) {
     throw boom.boomify(err)
@@ -38,8 +40,9 @@ exports.addConstituency = async (req, reply) => {
 exports.updateConstituency = async (req, reply) => {
   try {
     const id = req.params.id
-    const car = req.body
-    const { ...updateData } = car
+    const constituency = req.body
+    constituency.updatedAt = new Date()
+    const { ...updateData } = constituency
     return await Constituency.findByIdAndUpdate(id, updateData, { new: true })
   } catch (err) {
     throw boom.boomify(err)

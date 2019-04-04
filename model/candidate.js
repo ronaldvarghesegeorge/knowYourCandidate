@@ -10,7 +10,9 @@ const candidateSchema = new mongoose.Schema({
   constituency: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Constituency'
-  }
+  },
+  createdAt: Date,
+  updatedAt: Date
 })
 
 module.exports = mongoose.model('Candidate', candidateSchema)
