@@ -21,7 +21,7 @@ exports.getCandidateById = async (req, reply) => {
 exports.getCandidateByConstituency = async (req, reply) => {
   try {
     const id = req.params.id
-    return await Candidate.find({constituency: id})
+    return await Candidate.find({ constituency: id })
   } catch (err) {
     throw boom.boomify(err)
   }
@@ -30,7 +30,7 @@ exports.getCandidateByConstituency = async (req, reply) => {
 exports.getCandidateByParty = async (req, reply) => {
   try {
     const id = req.params.id
-    return await Candidate.find({party: id})
+    return await Candidate.find({ party: id })
   } catch (err) {
     throw boom.boomify(err)
   }

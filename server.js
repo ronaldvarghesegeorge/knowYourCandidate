@@ -3,16 +3,16 @@ const fastify = require('fastify')({
 })
 
 const constituencyRoutes = require('./route/constituency')
-// const candidateRoutes = require("./route/candidate")
+const candidateRoutes = require('./route/candidate')
 const swagger = require('./config/swagger')
 const mongoose = require('mongoose')
 
 fastify.register(require('fastify-formbody'))
 fastify.register(require('fastify-swagger'), swagger.options)
 
-// const routes = constituencyRoutes.concat(candidateRoutes)
+const routes = constituencyRoutes.concat(candidateRoutes)
 
-constituencyRoutes.forEach((route) => {
+routes.forEach((route) => {
   fastify.route(route)
 })
 

@@ -25,7 +25,7 @@ const getSchema = {
         party: { type: 'object' },
         constituency: { type: 'object' },
         createdAt: { format: 'date' },
-        updatedAt: { format : 'date' },
+        updatedAt: { format: 'date' },
         __v: { type: 'number' }
       }
     }
@@ -40,12 +40,12 @@ const postSchema = {
     type: 'object',
     properties: {
       name: { type: 'string' },
-        description: { type: 'string' },
-        party: { type: 'object' },
-        constituency: { type: 'object' },
-        createdAt: { format: 'date' },
-        updatedAt: { format : 'date' }
-    },
+      description: { type: 'string' },
+      party: { type: 'object' },
+      constituency: { type: 'object' },
+      createdAt: { format: 'date' },
+      updatedAt: { format: 'date' }
+    }
     // required: ['title', 'description']
   },
   response: {
@@ -59,7 +59,7 @@ const postSchema = {
         party: { type: 'object' },
         constituency: { type: 'object' },
         createdAt: { format: 'date' },
-        updatedAt: { format : 'date' },
+        updatedAt: { format: 'date' },
         __v: { type: 'number' }
       }
     }
@@ -79,14 +79,14 @@ const updateSchema = {
   body: {
     type: 'object',
     properties: {
-       name: { type: 'string' },
-        description: { type: 'string' },
-        party: { type: 'object' },
-        constituency: { type: 'object' },
+      name: { type: 'string' },
+      description: { type: 'string' },
+      party: { type: 'object' },
+      constituency: { type: 'object' },
       createdAt: { format: 'date' },
-        updatedAt: { format : 'date' }
+      updatedAt: { format: 'date' }
     },
-    required: ['title', 'description']
+    required: ['name', 'description']
   },
   response: {
     200: {
@@ -94,12 +94,12 @@ const updateSchema = {
       type: 'object',
       properties: {
         _id: { type: 'string' },
-         name: { type: 'string' },
+        name: { type: 'string' },
         description: { type: 'string' },
         party: { type: 'object' },
         constituency: { type: 'object' },
         createdAt: { format: 'date' },
-        updatedAt: { format : 'date' },
+        updatedAt: { format: 'date' },
         __v: { type: 'number' }
       }
     }
