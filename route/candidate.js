@@ -10,38 +10,38 @@ const routes = [
   {
     method: 'GET',
     url: '/api/candidate/:id',
-    handler: candidateController.getCandidateById
-    // // // schema: candidateSchema.getSchema
+    handler: candidateController.getCandidateById,
+    schema: candidateSchema.getSchema
   },
   {
     method: 'GET',
     url: '/api/candidate/party/:id',
-    handler: candidateController.getCandidateByParty
-    // // // schema: candidateSchema.getSchema
+    handler: candidateController.getCandidateByParty,
+    schema: candidateSchema.getSchema
   },
   {
     method: 'GET',
     url: '/api/candidate/constituency/:id',
-    handler: candidateController.getCandidateByConstituency
-    // // // schema: candidateSchema.getSchema
+    handler: candidateController.getCandidateByConstituency,
+    schema: candidateSchema.getSchema
   },
   {
     method: 'POST',
     url: '/api/candidate',
-    handler: candidateController.addCandidate
-    // // // schema: candidateSchema.postSchema
+    handler: candidateController.addCandidate,
+    schema: candidateSchema.postSchema
   },
   {
     method: 'PUT',
     url: '/api/candidate/:id',
-    handler: candidateController.updateCandidate
-    // // // schema: candidateSchema.updateSchema
+    handler: candidateController.updateCandidate,
+    schema: candidateSchema.updateSchema
   },
   {
     method: 'DELETE',
     url: '/api/candidate/:id',
-    handler: candidateController.deleteCandidate
-    // // // schema: candidateSchema.deleteSchema
+    handler: candidateController.deleteCandidate,
+    schema: candidateSchema.deleteSchema
   }
 ]
 

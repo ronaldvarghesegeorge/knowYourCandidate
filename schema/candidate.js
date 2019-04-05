@@ -22,10 +22,10 @@ const getSchema = {
         _id: { type: 'string' },
         name: { type: 'string' },
         description: { type: 'string' },
-        party: { type: 'object' },
-        constituency: { type: 'object' },
-        createdAt: { format: 'date' },
-        updatedAt: { format: 'date' },
+        party: { type: 'string' },
+        constituency: { type: 'string' },
+        createdAt: { type: 'string' },
+        updatedAt: { type: 'string' },
         __v: { type: 'number' }
       }
     }
@@ -41,12 +41,12 @@ const postSchema = {
     properties: {
       name: { type: 'string' },
       description: { type: 'string' },
-      party: { type: 'object' },
-      constituency: { type: 'object' },
-      createdAt: { format: 'date' },
-      updatedAt: { format: 'date' }
+      party: { type: 'string' },
+      constituency: { type: 'string' },
+      //createdAt: { format: 'date' },
+      //updatedAt: { format: 'date' }
     }
-    // required: ['title', 'description']
+    //required: ['title', 'description']
   },
   response: {
     200: {
@@ -56,10 +56,10 @@ const postSchema = {
         _id: { type: 'string' },
         name: { type: 'string' },
         description: { type: 'string' },
-        party: { type: 'object' },
-        constituency: { type: 'object' },
-        createdAt: { format: 'date' },
-        updatedAt: { format: 'date' },
+        party: { type: 'string' },
+        constituency: { type: 'string' },
+        createdAt: { type: 'string' },
+        updatedAt: { type: 'string' },
         __v: { type: 'number' }
       }
     }
@@ -81,10 +81,10 @@ const updateSchema = {
     properties: {
       name: { type: 'string' },
       description: { type: 'string' },
-      party: { type: 'object' },
-      constituency: { type: 'object' },
-      createdAt: { format: 'date' },
-      updatedAt: { format: 'date' }
+      party: { type: 'string' },
+      constituency: { type: 'string' },
+      //createdAt: { format: 'date' },
+      //updatedAt: { format: 'date' }
     },
     required: ['name', 'description']
   },
@@ -96,10 +96,10 @@ const updateSchema = {
         _id: { type: 'string' },
         name: { type: 'string' },
         description: { type: 'string' },
-        party: { type: 'object' },
-        constituency: { type: 'object' },
-        createdAt: { format: 'date' },
-        updatedAt: { format: 'date' },
+        party: { type: 'string' },
+        constituency: { type: 'string' },
+        createdAt: { type: 'string' },
+        updatedAt: { type: 'string' },
         __v: { type: 'number' }
       }
     }
