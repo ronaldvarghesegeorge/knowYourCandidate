@@ -13,19 +13,19 @@ const getSchema = {
     properties: {
       id: { type: 'string' }
     }
-  },
-  response: {
-    200: {
-      description: 'Successful response',
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        title: { type: 'string' },
-        description: { type: 'string' },
-        __v: { type: 'number' }
-      }
-    }
   }
+  // response: {
+  //   200: {
+  //     description: 'Successful response',
+  //     type: 'object',
+  //     properties: {
+  //       _id: { type: 'string' },
+  //       title: { type: 'string' },
+  //       description: { type: 'string' },
+  //       __v: { type: 'number' }
+  //     }
+  //   }
+  // }
 }
 
 const postSchema = {
@@ -39,25 +39,25 @@ const postSchema = {
       description: { type: 'string' }
     },
     required: ['title', 'description']
-  },
-  response: {
-    200: {
-      description: 'Successful response',
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        title: { type: 'string' },
-        description: { type: 'string' },
-        __v: { type: 'number' }
-      }
-    }
   }
+  // response: {
+  //   200: {
+  //     description: 'Successful response',
+  //     type: 'object',
+  //     properties: {
+  //       _id: { type: 'string' },
+  //       title: { type: 'string' },
+  //       description: { type: 'string' },
+  //       __v: { type: 'number' }
+  //     }
+  //   }
+  // }
 }
 
 const updateSchema = {
-  description: 'New Constituency',
+  description: 'update Constituency',
   tags: ['constituency'],
-  summary: 'Add new Constituency',
+  summary: ' update Constituency',
   params: {
     type: 'object',
     properties: {
@@ -71,19 +71,19 @@ const updateSchema = {
       description: { type: 'string' }
     },
     required: ['title', 'description']
-  },
-  response: {
-    200: {
-      description: 'Successful response',
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        title: { type: 'string' },
-        description: { type: 'string' },
-        __v: { type: 'number' }
-      }
-    }
   }
+  // response: {
+  //   200: {
+  //     description: 'Successful response',
+  //     type: 'object',
+  //     properties: {
+  //       _id: { type: 'string' },
+  //       title: { type: 'string' },
+  //       description: { type: 'string' },
+  //       __v: { type: 'number' }
+  //     }
+  //   }
+  // }
 }
 
 const deleteSchema = {
@@ -98,10 +98,26 @@ const deleteSchema = {
   }
 }
 
+const updatePartySchema = {
+  params: {
+    type: 'object',
+    properties: {
+      id: { type: 'string' }
+    }
+  },
+  body: {
+    type: 'object',
+    properties: {
+      id: { type: 'string' }
+    }
+  }
+}
+
 module.exports = {
   getAllSchema,
   getSchema,
   postSchema,
   updateSchema,
-  deleteSchema
+  deleteSchema,
+  updatePartySchema
 }

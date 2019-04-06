@@ -13,23 +13,23 @@ const getSchema = {
     properties: {
       id: { type: 'string' }
     }
-  },
-  response: {
-    200: {
-      description: 'Successful response',
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        name: { type: 'string' },
-        description: { type: 'string' },
-        party: { type: 'string' },
-        constituency: { type: 'string' },
-        createdAt: { type: 'string' },
-        updatedAt: { type: 'string' },
-        __v: { type: 'number' }
-      }
-    }
   }
+  // response: {
+  //   200: {
+  //     description: 'Successful response',
+  //     type: 'object',
+  //     properties: {
+  //       _id: { type: 'string' },
+  //       name: { type: 'string' },
+  //       description: { type: 'string' },
+  //       party: { type: 'string' },
+  //       constituency: { type: 'string' },
+  //       createdAt: { type: 'string' },
+  //       updatedAt: { type: 'string' },
+  //       __v: { type: 'number' }
+  //     }
+  //   }
+  // }
 }
 
 const postSchema = {
@@ -42,28 +42,26 @@ const postSchema = {
       name: { type: 'string' },
       description: { type: 'string' },
       party: { type: 'string' },
-      constituency: { type: 'string' },
-      //createdAt: { format: 'date' },
-      //updatedAt: { format: 'date' }
-    }
-    //required: ['title', 'description']
-  },
-  response: {
-    200: {
-      description: 'Successful response',
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        name: { type: 'string' },
-        description: { type: 'string' },
-        party: { type: 'string' },
-        constituency: { type: 'string' },
-        createdAt: { type: 'string' },
-        updatedAt: { type: 'string' },
-        __v: { type: 'number' }
-      }
-    }
+      constituency: { type: 'string' }
+    },
+    required: ['name', 'description']
   }
+  // response: {
+  //   200: {
+  //     description: 'Successful response',
+  //     type: 'object',
+  //     properties: {
+  //       _id: { type: 'string' },
+  //       name: { type: 'string' },
+  //       description: { type: 'string' },
+  //       party: { type: 'string' },
+  //       constituency: { type: 'string' },
+  //       createdAt: { type: 'string' },
+  //       updatedAt: { type: 'string' },
+  //       __v: { type: 'number' }
+  //     }
+  //   }
+  // }
 }
 
 const updateSchema = {
@@ -82,28 +80,26 @@ const updateSchema = {
       name: { type: 'string' },
       description: { type: 'string' },
       party: { type: 'string' },
-      constituency: { type: 'string' },
-      //createdAt: { format: 'date' },
-      //updatedAt: { format: 'date' }
+      constituency: { type: 'string' }
     },
     required: ['name', 'description']
-  },
-  response: {
-    200: {
-      description: 'Successful response',
-      type: 'object',
-      properties: {
-        _id: { type: 'string' },
-        name: { type: 'string' },
-        description: { type: 'string' },
-        party: { type: 'string' },
-        constituency: { type: 'string' },
-        createdAt: { type: 'string' },
-        updatedAt: { type: 'string' },
-        __v: { type: 'number' }
-      }
-    }
   }
+  // response: {
+  //   200: {
+  //     description: 'Successful response',
+  //     type: 'object',
+  //     properties: {
+  //       _id: { type: 'string' },
+  //       name: { type: 'string' },
+  //       description: { type: 'string' },
+  //       party: { type: 'string' },
+  //       constituency: { type: 'string' },
+  //       createdAt: { type: 'string' },
+  //       updatedAt: { type: 'string' },
+  //       __v: { type: 'number' }
+  //     }
+  //   }
+  // }
 }
 
 const deleteSchema = {

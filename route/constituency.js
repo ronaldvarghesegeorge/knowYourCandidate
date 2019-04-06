@@ -30,6 +30,12 @@ const routes = [
     url: '/api/constituency/:id',
     handler: constituencyController.deleteConstituency,
     schema: constituencySchema.deleteSchema
+  },
+  {
+    method: 'PUT',
+    url: '/api/constituency/party/:id',
+    handler: constituencyController.addParty,
+    schema: constituencySchema.updatePartySchema
   }
 ]
 
