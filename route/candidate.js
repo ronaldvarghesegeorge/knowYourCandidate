@@ -42,6 +42,18 @@ const routes = [
     url: '/api/candidate/:id',
     handler: candidateController.deleteCandidate,
     schema: candidateSchema.deleteSchema
+  },
+  {
+    method: 'PUT',
+    url: '/api/candidate/image/:id',
+    handler: candidateController.uploadImage
+    // schema: candidateSchema.imageSchema
+  },
+  {
+    method: 'GET',
+    url: '/api/candidate/image/:id',
+    handler: candidateController.getImage,
+    schema: candidateSchema.getSchema
   }
 ]
 

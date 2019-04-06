@@ -11,6 +11,7 @@ const candidateSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Constituency'
   },
+  image: String,
   createdAt: Date,
   updatedAt: Date
 })

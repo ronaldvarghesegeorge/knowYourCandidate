@@ -33,10 +33,28 @@ const routes = [
   },
   {
     method: 'PUT',
-    url: '/api/constituency/party/:id',
-    handler: constituencyController.addParty,
-    schema: constituencySchema.updatePartySchema
+    url: '/api/constituency/image/:id',
+    handler: constituencyController.uploadImage,
+    schema: constituencySchema.imageSchema
+  },
+  {
+    method: 'GET',
+    url: '/api/constituency/image/:id',
+    handler: constituencyController.getImage,
+    schema: constituencySchema.getSchema
   }
+  // {
+  //   method: 'PUT',
+  //   url: '/api/constituency/party/:id',
+  //   handler: constituencyController.addParty,
+  //   schema: constituencySchema.updatePartySchema
+  // },
+  // {
+  //   method: 'PUT',
+  //   url: '/api/constituency/party/remove/:id',
+  //   handler: constituencyController.deleteParty,
+  //   schema: constituencySchema.updatePartySchema
+  // }
 ]
 
 module.exports = routes

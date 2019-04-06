@@ -2,15 +2,24 @@ const fastify = require('fastify')({
   logger: true
 })
 
+const mongoose = require('mongoose')
+const fileUpload = require('fastify-file-upload')
+const staticFiles = require('fastify-static')
+const path = require('path')
 const constituencyRoutes = require('./route/constituency')
 const candidateRoutes = require('./route/candidate')
+const partyRoutes = require('./route/party')
 const swagger = require('./config/swagger')
-const mongoose = require('mongoose')
 
+fastify.register(staticFiles, {
+  root: path.join(__dirname, 'uploads')
+  // prefix: '/uploads/'
+})
+fastify.register(fileUpload)
 fastify.register(require('fastify-formbody'))
 fastify.register(require('fastify-swagger'), swagger.options)
 
-const routes = constituencyRoutes.concat(candidateRoutes)
+const routes = constituencyRoutes.concat(candidateRoutes, partyRoutes)
 
 routes.forEach((route) => {
   fastify.route(route)

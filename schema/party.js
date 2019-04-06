@@ -1,13 +1,13 @@
 const getAllSchema = {
-  description: 'Shows all the constituency. Sort, search and pagination yet to be implemented',
-  tags: ['constituency'],
-  summary: 'Get all Constituency'
+  description: 'Shows all the party. Sort, search and pagination yet to be implemented',
+  tags: ['party'],
+  summary: 'Get all party'
 }
 
 const getSchema = {
-  description: 'Constituency',
-  tags: ['constituency'],
-  summary: 'Get Constituency by using id',
+  description: 'party',
+  tags: ['party'],
+  summary: 'Get party by using id',
   params: {
     type: 'object',
     properties: {
@@ -29,26 +29,16 @@ const getSchema = {
 }
 
 const postSchema = {
-  description: 'Create a new Constituency',
-  tags: ['constituency'],
-  summary: 'Add Constituency',
+  description: 'Create a new party',
+  tags: ['party'],
+  summary: 'Add party',
   body: {
     type: 'object',
     properties: {
       title: { type: 'string' },
-      description: { type: 'string' },
-      party: {
-        type: 'array',
-        maxItems: 0,
-        items: {
-          type: ['string']
-          // properties: {
-          //   id: 'string'
-          // }
-        }
-      }
+      description: { type: 'string' }
     },
-    required: ['title']
+    required: ['title', 'description']
   }
   // response: {
   //   200: {
@@ -65,9 +55,9 @@ const postSchema = {
 }
 
 const updateSchema = {
-  description: 'update Constituency',
-  tags: ['constituency'],
-  summary: ' update Constituency',
+  description: 'update party',
+  tags: ['party'],
+  summary: ' update party',
   params: {
     type: 'object',
     properties: {
@@ -80,7 +70,7 @@ const updateSchema = {
       title: { type: 'string' },
       description: { type: 'string' }
     },
-    required: ['title']
+    required: ['title', 'description']
   }
   // response: {
   //   200: {
@@ -97,9 +87,9 @@ const updateSchema = {
 }
 
 const deleteSchema = {
-  description: 'Constituency',
-  tags: ['constituency'],
-  summary: 'Get Constituency',
+  description: 'party',
+  tags: ['party'],
+  summary: 'Get party',
   params: {
     type: 'object',
     properties: {
@@ -123,34 +113,11 @@ const deleteSchema = {
 //   }
 // }
 
-const imageSchema = {
-  description: 'add image Constituency',
-  tags: ['constituency'],
-  summary: ' update Constituency',
-  consumes: ['multipart/form-data'],
-  params: {
-    type: 'object',
-    properties: {
-      id: { type: 'string' }
-    }
-  },
-  body: {
-    type: 'object',
-    properties: {
-      file: {
-        type: 'string'
-        // format: 'binary'
-      }
-    }
-  }
-}
-
 module.exports = {
   getAllSchema,
   getSchema,
   postSchema,
   updateSchema,
-  deleteSchema,
-  imageSchema
+  deleteSchema
   // updatePartySchema
 }

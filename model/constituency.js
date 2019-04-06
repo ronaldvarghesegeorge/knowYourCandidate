@@ -11,6 +11,7 @@ const constituencySchema = new mongoose.Schema({
   title: String,
   description: String,
   party: [partySchema],
+  image: String,
   createdAt: Date,
   updatedAt: Date
 })

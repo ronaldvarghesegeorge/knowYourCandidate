@@ -20,8 +20,10 @@
   "dependencies": {
     "boom": "^7.3.0",
     "fastify": "^2.1.0",
+    "fastify-file-upload": "^1.0.0",
     "fastify-formbody": "^3.1.0",
     "fastify-swagger": "^2.3.2",
+    "formidable": "^1.2.1",
     "mongoose": "^5.4.20",
     "nodemon": "^1.18.10"
   },
